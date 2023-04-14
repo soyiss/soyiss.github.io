@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ../를 안붙이는 이유는 같은 수준이라서  -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- defer속성: 바디를 다 읽고 script를 읽어라! -->
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <h2>안녕 안녕</h2>
+    <!-- index 파일과 save파일은 같은 수준에 위치해서 링크에 파일 이름만 써도 가능하다  -->
+    <a href="save.html">회원가입</a>
+    <button onclick="goLogin()">로그인</button>
+    <button onclick="fun1()">함수호출</button>
+</body>
+<script>
+    const goLogin = () => {
+        location.href = "login.html";
+    }
+</script>
+</html>
