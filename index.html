@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +10,80 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- defer속성: 바디를 다 읽고 script를 읽어라! -->
     <script src="js/index.js" defer></script>
+    <style>
+        body {
+            font-family: 'DungGeunMo';
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        h2 {
+            /* border: 7px dashed black; 
+            padding: 10px 30px 10px 30px; */
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 70px;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .item {
+            font-size: 35px;
+        }
+
+        .item2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+
+        a {
+            color: black;
+            font-size: x-large;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+    </style>
 </head>
+
 <body>
-    <h2>안녕 안녕</h2>
+    <h2 id="start">my development</h2>
     <!-- index 파일과 save파일은 같은 수준에 위치해서 링크에 파일 이름만 써도 가능하다  -->
-    <a href="save.html">회원가입</a>
-    <button onclick="goLogin()">로그인</button>
-    <button onclick="fun1()">함수호출</button>
+
+    <div id="box" class="container mt-2">
+
+        <div class="item item2">
+            <a href="save.html">⑴ 회원가입</a><br>
+            <a href="login.html">⑵ 로그인</a><br>
+            <!-- <button onclick="goLogin()">로그인</button> -->
+            <a href="" onclick="fun1()">⑶ 깃허브 주소</a>
+        </div>
+
+
+    </div>
+
+   
+
 </body>
 <script>
     const goLogin = () => {
         location.href = "login.html";
     }
 </script>
+
 </html>
