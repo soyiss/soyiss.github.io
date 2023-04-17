@@ -9,11 +9,14 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
 
     <title>회원가입</title>
 
     <style>
         a {
+            text-decoration: none;
             font-family: 'DungGeunMo';
             color: rgb(10, 10, 10);
         }
@@ -65,7 +68,7 @@
             /* 앞상하 뒷좌우 */
             box-sizing: border-box;
             /* 패딩수치를 인사이드 처리 */
-
+            font-size: 16px
         }
 
         #all select:first-child {
@@ -149,7 +152,7 @@
 </head>
 
 <body>
-
+    <i class="bi bi-backspace"></i>
     <a href="index.html">뒤로가기</a>
 
     <div id="all" class="container mt-2">
@@ -165,7 +168,7 @@
             <div class="row g-4 mt-3 mb-3">
                 <h6>이메일</h6>
                 <div class="col-4 mt-1">
-                    <input type="text" class="form-control" id="member_email" name="memberEmail" placeholder="ID로 이용">
+                    <input type="text" class="form-control" onblur="fun1()" id="member_email" name="memberEmail" placeholder="ID로 이용">
                 </div>
                 <div class="span1 col-1 mt-1">
                     <span>@</span>
@@ -181,6 +184,7 @@
                         <option value="gmail.com">gmail.com</option>
                     </select>
                 </div>
+                <h6 id="user_email"></h6>
             </div>
             <div class="mt-4">
                 <h6>비밀번호</h6>
@@ -241,7 +245,7 @@
                     <div class="col-7">
                         <input type="text" id="sample6_postcode" class="form-control" placeholder="우편번호">
                     </div>
-                    <div class="col-5 mb-2">
+                    <div class=" col-5 d-grid mb-2" >
                         <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
                     </div>
                 </div>
@@ -269,7 +273,7 @@
                         <span class="text">이용약관 전체 동의</span>
                     </label><br>
                     <label for="chk1">
-                        <input type='checkbox' name='checka' value='sellect1' id="chk1"/>
+                        <input type='checkbox' name='checka' value='sellect1' id="chk1" />
                         <!--실제로는 글자를 기울이는 태그, 퍼블리셔들이 아이콘담을 때 많이 사용-->
                         <i class="circle"></i>
                         <span class="text">이용약관동의 (필수)</span>
@@ -281,13 +285,13 @@
                         <span class="text">개인정보수집이용 동의 (필수)</span>
                     </label><br>
                     <label for="chk3">
-                        <input type='checkbox' name='checka' value='sellect3' id="chk3"/>
+                        <input type='checkbox' name='checka' value='sellect3' id="chk3" />
                         <!--실제로는 글자를 기울이는 태그, 퍼블리셔들이 아이콘담을 때 많이 사용-->
                         <i class="circle"></i>
                         <span class="text">만 14세 이상(필수)</span>
                     </label><Br>
                     <label for="chk4">
-                        <input type='checkbox' name='checka' value='sellect4' id="chk4"/>
+                        <input type='checkbox' name='checka' value='sellect4' id="chk4" />
                         <!--실제로는 글자를 기울이는 태그, 퍼블리셔들이 아이콘담을 때 많이 사용-->
                         <i class="circle"></i>
                         <span class="text">마케팅 수신동의(선택)</span>
@@ -310,33 +314,54 @@
 </body>
 <script>
 
-    // const fun1 = () => {
-    //     const id = document.getElementById("member_user_name").value;
-    //     const id1 = document.getElementById("user_id");
-    //     const id2 = /^(?=.*[a-z])(?=.*\d)[a-z\d-_]{5,10}$/;
-    //}
+    const fun1 = () => {
+        const id = document.getElementById("member_email").value;
+        const id1 = document.getElementById("user_email");
+        const id2 = /^(?=.*[a-z])(?=.*\d)[a-z\d-_]{5,10}$/;
+
+        if (id.length == 0) {
+            id1.innerText = "필수 입력입니다";
+            id1.style.color = "red";
+
+        } else if (!id.match(id2)) {
+            if(id.length <5 || id.length > 10){
+                id1.innerText = "5~10 글자 이내로 작성해주세요.";
+                id1.style.color = "red";
+            }else{
+                id1.innerText = "영어 소문자, 숫자 필수입력해주세요. \n 특수문자는 (-,_)만 사용 가능합니다"
+                id1.style.color = "red";
+            }
+
+        } else {
+            id1.innerText = "좋아요";
+            id1.style.color = "green";
+
+        }
+
+    }
 
     const domain_select = () => {
         const domain = document.getElementById("email-domain-select");
 
         const domainInput = document.getElementById("email-domain");
         domainInput.value = domain.value;
+        if (id.length == 0) {
+            id1.innerText = "필수 입력입니다"
+            id1.style.color = "red";
+
+        } else if (!id.match(id2)) {
+            id1.innerText = "5~10 글자 이내로 소문자, 숫자는 필수로 입력해주세요"
+            id1.style.color = "red";
+
+        } else {
+            id1.innerText = "좋아요"
+            id1.style.color = "green";
+
+        }
 
     }
 
-    if (id.length == 0) {
-        id1.innerText = "필수 입력입니다"
-        id1.style.color = "red";
 
-    } else if (!id.match(id2)) {
-        id1.innerText = "5~10 글자 이내로 소문자, 숫자는 필수로 입력해주세요"
-        id1.style.color = "red";
-
-    } else {
-        id1.innerText = "좋아요"
-        id1.style.color = "green";
-
-    }
 
 
     const fun2 = () => {
