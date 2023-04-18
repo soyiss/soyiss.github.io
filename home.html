@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,79 +10,97 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"> -->
     <script src="https://kit.fontawesome.com/e3b6bf5ae9.js" crossorigin="anonymous"></script>
-
-
     <style>
-        /* html,body{
-            margin: 0;padding: 0;
-            width: 100%; height: 100%;
-        } */
-        body {
-            min-height: 75rem;
-            padding-top: 4.5rem;
-            height: 100vh;
+        body,
+        html {
+            margin: 0;
+            padding: 0;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 100%;
+
+        }
+
+
+
+        #wrapper {
+            height: auto;
+            min-height: 100%;
+            padding-bottom: 147px;
+            background-color: #f9f9f9;
+
+        }
+
+        .main-content {
+
+            width: 700px;
+            height: auto;
+            padding: 90px 0;
+            margin: 0 auto;
+        }
+
+        footer {
+            height: 147px;
+            position: relative;
+            transform: translateY(-100%);
+
+            background-color: #cfcfcf;
+
+
+        }
+
+
+        .foo_div1 {
+            text-align: center;
+        }
+
+        .foo_div1 span {
+            font-size: 10px;
+            color: rgb(122, 122, 122);
+        }
+
+        .foo_div1 p {
+            margin-top: 5px;
+            font-size: 10px;
+            color: rgb(122, 122, 122);
+        }
+
+        .foo_div1 i {
+            width: 25px;
+            height: 25px;
+            margin-top: 10px;
+            color: black;
+
+        }
+
+        .foo_div1 i:hover {
+            color: blue;
+
         }
 
         a {
             text-decoration: none;
         }
 
-        .wrapper {
-            display: flex;
-        }
+        .container2 {
 
-        .icon {
-
-            margin: 5px;
-            background-color: #ffe8ee;
-            height: 50px;
-            width: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.2);
+            /* background-color: rgb(242, 242, 241); */
+            height: 500px;
+            margin-bottom: 100px;
 
         }
 
-        .icon i {
-
-            font-size: 25px;
-            color: #957dad;
-            transition: all 0.2s;
+        hr {
+            margin: 50px 0;
         }
-
-        .icon:hover {
-            background-color: #fcf1d8;
-        }
-
-        .icon:hover i {
-            transform: rotate(15deg) scale(1.5);
-            color: #b3a580;
-        }
-
-
-        /* #allin{
-            height: auto;
-            min-height: 100%;
-            padding-bottom: 60px;
-        } */
-        /* footer{
-            height: 60px;
-            position: relative;
-            transform: translateY(-100%);
-        } */
-
-    
     </style>
 </head>
 
 <body>
-    <!-- <div id="allin"> -->
+
+
+    <div id='wrapper'>
+
+
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">my protfolio</a>
@@ -93,10 +111,23 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">About me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Project</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Click Me
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!--<li><a class="dropdown-item" href="#">Hello?</a></li>
+                              <li><hr class="dropdown-divider"></li>-->
+                                <li><a class="dropdown-item" href="#" onclick="fun()"><i
+                                            class="fa-regular fa-face-smile-beam fa-bounce"
+                                            style="color: #94cae5;"></i></a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Disabled</a>
@@ -106,41 +137,135 @@
                 </div>
             </div>
         </nav>
-        </div>
-    <!-- </div> -->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-muted">&copy; 2023 soyi's protfolio</span>
-                <div class="wrapper">
-                    <a href="http://www.github.com/soyiss" class="icon">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://blog.naver.com/crlue" class="icon">
-                        <i class="fa-solid fa-blog"></i>
-                    </a>
+        <div class="main-content">
+
+            <h1 class="mb-5">About Me</h1>
+            <hr class="featurette-divider">
+            <div class=" container2"><img src="images/코딩2.jpg" alt="아직 빈칸" style="width: 700px;"></div>
+            <!-- <hr class="featurette-divider"> -->
+
+            <h1 class="mb-5">Project</h1>
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Project 1. <span class="text-muted">Sign-up and Login
+                            project</span></h2>
+                    <p class="lead mt-4">The project was implemented using the Html,css,javascript language</p>
+                </div>
+                <div class="col-md-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/pro1.png" class="card-img-top" alt="project1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sign-up/ Login</h5>
+                            <p class="card-text">develop period<br> 2023.04.14 ~ 2023.04.18 </p>
+                            <a href="index.html" class="btn btn-secondary" style="float: right;">Go project</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See
+                            for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
+                        how this layout would work with some actual real-world content in place.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-secondary" style="float: right;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See
+                            for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
+                        how this layout would work with some actual real-world content in place.</p>
+                </div>
+                <div class="col-md-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-secondary" style="float: right;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See
+                            for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
+                        how this layout would work with some actual real-world content in place.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-secondary" style="float: right;">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
-        </footer>
+        </div>
     </div>
+    <footer>
+        <div class="foo_div1">
+            <!-- <span>인천일보아카데미</span><span> |</span> -->
+            <span>[과정평가형] 반응형 웹 기반 BACK-END 개발자를 위한 정보처리 산업기사 수료</span><span> |</span>
+            <!-- <span>사업자등록번호 : 000-000-00000</span><span> |</span> -->
+            <p>기간 : 2023.02.21 - 2023.08.01</p>
+            <p>ICIA ACADEMY</p>
 
+            <a href="http://www.github.com/soyiss" class="icon">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://blog.naver.com/crlue" class="icon">
+                <i class="fa-solid fa-blog"></i>
+            </a>
 
+            <p>&copy; 2023 soyi's protfolio</p>
 
-
-
+        </div>
+    </footer>
 
 
 
 </body>
+<script>
+    const fun = () => {
+        alert("Have a good day!");
+    }
+
+</script>
 
 </html>

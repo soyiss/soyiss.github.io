@@ -1,12 +1,8 @@
-a{
-    text-decoration: none;
-    color: black;
-    font-size: x-large;
-    margin-bottom: 10px;
-    color: white;
-}
+
 
 body {
+    width: 100%;
+    height: auto;
     font-family: 'DungGeunMo';
     text-align: center;
     background-color: black;
@@ -14,12 +10,15 @@ body {
 }
 
 h2 {
-    /* border: 7px dashed black; 
-    padding: 10px 30px 10px 30px; */
+    margin: 200px 0 100px 0;
+    /* border: 7px dashed rgb(0, 0, 0);  */
+    padding: 20px 30px;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
     font-size: 70px;
+    /* background-color: rgb(253, 238, 238); */
+    color: white;
 
 }
 
@@ -44,5 +43,11 @@ h2 {
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
 }
 
