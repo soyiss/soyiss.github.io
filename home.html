@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
 
-    <!-- <META HTTP-EQUIV="Page-exit" CONTENT="BlendTrans(Duration=0.2)">
-    <META HTTP-EQUIV="Page-Enter" CONTENT="BlendTrans(Duration=0.2)"> -->
-
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"> -->
+
     <script src="https://kit.fontawesome.com/e3b6bf5ae9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="./js/home.js" defer></script>
+
 
     <style>
         body,
@@ -24,12 +24,12 @@
             height: 100%;
 
         }
-      
+
 
         #wrapper {
             height: auto;
             min-height: 100%;
-            padding-bottom: 220px;
+            padding-bottom: 245px;
             background-color: #f9f9f9;
 
         }
@@ -43,7 +43,7 @@
         }
 
         footer {
-            height: 220px;
+            height: 245px;
             position: relative;
             transform: translateY(-100%);
 
@@ -100,6 +100,10 @@
         nav {
             height: 70px;
         }
+
+        #gopro:hover{
+            background-color: blue;
+        }
     </style>
 </head>
 
@@ -139,13 +143,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sectionend"><i class="fa-sharp fa-solid fa-angles-up fa-rotate-180" style="color: white;"></i></a>
+                            <a class="nav-link" href="#sectionend"><i
+                                    class="fa-sharp fa-solid fa-angles-up fa-rotate-180" style="color: white;"></i></a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link disabled"></a>
 
                         </li> -->
-                        
+
                     </ul>
                 </div>
             </div>
@@ -175,7 +180,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sign-up/ Login</h5>
                             <p class="card-text">develop period<br> 2023.04.14 ~ 2023.04.18 </p>
-                            <a href="index.html" class="btn btn-secondary" style="float: right;">Go project</a>
+                            <a href="index.html" id="gopro" class="btn btn-secondary" style="float: right;">Go project</a>
                         </div>
                     </div>
 
@@ -264,13 +269,17 @@
                 <a href="http://www.github.com/soyiss" class="icon">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="#" class="icon">
+                <!-- <a href="#" class="icon">
                     <i class="fa-brands fa-twitter"></i>
-                </a>
+                </a> -->
                 <a href="https://blog.naver.com/crlue" class="icon">
                     <i class="fa-solid fa-blog"></i>
                 </a>
+                <a href="https://www.icia.co.kr/" class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </a>
             </div>
+            <p style="margin: 5px 0px 0px 0px;">E-mail : zwcrvl@naver.com</p>
             <p id="sectionend">&copy; 2023 soyi's protfolio</p>
             <a href="#sectionfirst" class="icon">
                 <i class="fa-solid fa-angles-up" style="color: black;"></i>
